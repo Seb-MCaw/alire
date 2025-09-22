@@ -44,6 +44,8 @@ check_output(p1.out)
 # with unexpected output
 
 p3 = run_alr_interactive(["printenv", "--unix"], [], [])
+print("p2.out:\n" + repr(p2.out))
+print("p3:\n" + repr(p3))
 assert_eq(p2.out, p3)
 
 

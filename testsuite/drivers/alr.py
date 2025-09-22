@@ -166,6 +166,7 @@ def run_alr_interactive(args: list[str], output: list[str], input: list[str],
         # Alternate between expected output and given input
         for out, inp in zip(output, input):
             child.expect(out)
+            print(child.before.decode('utf-8'))
             child.sendline(inp)
 
         # Wait for the process to finish
